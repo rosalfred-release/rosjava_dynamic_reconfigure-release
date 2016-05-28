@@ -1,0 +1,38 @@
+ros-indigo-rosjava-dynamic-reconfigure (0.2.4-0saucy) saucy; urgency=high
+
+  * Clean code
+  * Update package file description
+  * Update gradle & dependencies
+  * Contributors: Erwan Le Huitouze, Mickael Gaillard
+
+ -- Mickaël Gaillard <mick.gaillard@gmail.com>  Fri, 27 May 2016 22:00:00 -0000
+
+ros-indigo-rosjava-dynamic-reconfigure (0.2.3-0saucy) saucy; urgency=high
+
+  * Update CMake file
+  * Contributors: Erwan Le Huitouze
+
+ -- Mickaël Gaillard <mick.gaillard@gmail.com>  Fri, 10 Oct 2014 22:00:00 -0000
+
+ros-indigo-rosjava-dynamic-reconfigure (0.2.2-0saucy) saucy; urgency=high
+
+  * Update build.gradle
+  * Contributors: Erwan Le Huitouze
+
+ -- Mickaël Gaillard <mick.gaillard@gmail.com>  Fri, 10 Oct 2014 20:12:00 -0000
+
+ros-indigo-rosjava-dynamic-reconfigure (0.2.1-0saucy) saucy; urgency=high
+
+  * Add settings.gradle
+  * Contributors: Erwan Le Huitouze
+
+ -- Mickaël Gaillard <mick.gaillard@gmail.com>  Fri, 10 Oct 2014 19:59:00 -0000
+
+ros-indigo-rosjava-dynamic-reconfigure (0.2.0-0saucy) saucy; urgency=high
+
+  * Initial commit
+  * Contributors: Mickael Gaillard
+
+ -- Mickaël Gaillard <mick.gaillard@gmail.com>  Tue, 30 Sep 2014 22:00:00 -0000
+
+
