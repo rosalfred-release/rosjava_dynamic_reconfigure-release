@@ -1,0 +1,12 @@
+Source: ros-indigo-rosjava-dynamic-reconfigure
+Section: misc
+Priority: extra
+Maintainer: Mickaël Gaillard <mick.gaillard@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-dynamic-reconfigure, ros-indigo-rosjava-build-tools, ros-indigo-rosjava-core
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rosjava-dynamic-reconfigure
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-dynamic-reconfigure, ros-indigo-rosjava-core
+Description: The rosjava_dynamic_reconfigure package
