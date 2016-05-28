@@ -1,0 +1,60 @@
+apply plugin: 'ros-java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'catkin'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+// The Application plugin and mainClassName attribute are only required if
+// your package is used as a binary.
+apply plugin: 'application'
+mainClassName = 'org.ros.RosRun'
+
+group = 'org.ros.rosjava'
+
+defaultTasks 'install'
+
+buildscript {
+    String rosMavenPath = System.getenv("ROS_MAVEN_PATH")
+    String rosMavenRepository = System.getenv("ROS_MAVEN_REPOSITORY")
+    repositories {
+        if (rosMavenPath != null) {
+            rosMavenPath.tokenize(":").each { path ->
+                maven {
+                    // We can't use uri() here because we aren't running inside something
+                    // that implements the Script interface.
+                    url "file:${path}"
+                }
+            }
+        }
+        maven {
+            url "http://repository.springsource.com/maven/bundles/release"
+        }
+        maven {
+            url "http://repository.springsource.com/maven/bundles/external"
+        }
+        if (rosMavenRepository != null) {
+            maven {
+                url rosMavenRepository
+            }
+        }
+        maven {
+            url "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.ros.rosjava_bootstrap:gradle_plugins:[0.2,0.3)"
+    }
+}
+
+allprojects {
+    group = 'org.ros.rosjava'
+    version = project.catkin.pkg.version
+}
+
+dependencies {
+    compile 'org.ros.rosjava_core:rosjava:[0,)'
+    compile 'org.ros.rosjava_messages:dynamic_reconfigure:[0,)'
+}
